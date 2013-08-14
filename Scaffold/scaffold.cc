@@ -743,14 +743,14 @@ int main(int argc, char** argv)
 	unsigned bests = 0, bestN50 = 0;
 	const double STEP = cbrt(10); // Three steps per decade.
 	unsigned ilast = (unsigned)round(
-			log((double)opt::minContigLengthEnd) / log(STEP));
+			log(opt::minContigLengthEnd) / log(STEP));
 	for (unsigned i = (unsigned)round(
-				log((double)opt::minContigLength) / log(STEP));
+				log(opt::minContigLength) / log(STEP));
 			i <= ilast; ++i) {
 		unsigned s = (unsigned)pow(STEP, (int)i);
 
 		// Round to 1 figure.
-		double nearestDecade = pow(10, floor(log10((double)s)));
+		double nearestDecade = pow(10, floor(log10(s)));
 		s = unsigned(round(s / nearestDecade) * nearestDecade);
 
 		unsigned n50 = scaffold(g, s, false);

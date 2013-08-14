@@ -40,7 +40,7 @@ AC_TYPE_UINT64_T
 AC_CHECK_FUNCS([dup2 gethostname getopt_long getpagesize \
 				memset strdup strerror strtoul])
 AC_FUNC_FORK
-#AC_FUNC_MALLOC
+AC_FUNC_MALLOC
 AC_FUNC_MEMCMP
 AC_FUNC_REALLOC
 AC_FUNC_SETVBUF_REVERSED
@@ -164,7 +164,7 @@ if test -z $OPENMP_CXXFLAGS; then
 fi
 
 # Set compiler flags.
-#AC_SUBST(AM_CXXFLAGS, '-Wall -Wextra -Werror')
+AC_SUBST(AM_CXXFLAGS, '-Wall -Wextra -Werror')
 
 AC_CONFIG_FILES([
 	Makefile
