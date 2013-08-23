@@ -83,7 +83,7 @@ static inline
 bool endsWith(const std::string& s, const std::string& suffix)
 {
 	size_t n = suffix.size();
-	return s.size() > n && equal(s.end() - n, s.end(),
+	return s.size() > n && std::equal(s.end() - n, s.end(),
 			suffix.begin());
 }
 

@@ -963,7 +963,7 @@ static float calculateCoverageThreshold(const Histogram& h)
 				"Reconstruction: " << trimmed.size() << endl;
 
 		unsigned median = trimmed.median();
-		float cov1 = sqrt(median);
+		float cov1 = sqrt((float)median);
 		if (cov1 == cov) {
 			// The coverage threshold has converged.
 			if (opt::rank <= 0)
