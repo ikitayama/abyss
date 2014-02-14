@@ -9,6 +9,7 @@
 #include <cstring> // for memcpy
 #include <stdint.h>
 #include <ostream>
+#include <boost/functional/hash.hpp>
 
 /** A k-mer. */
 class Kmer
